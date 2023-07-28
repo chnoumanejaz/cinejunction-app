@@ -34,7 +34,13 @@
             </li>
 
             <li class="navigation__item navigation__drop">
-              <a href="#" class="navigation__link">More</a>
+              <a href="#" class="navigation__link svg-drop">
+                More
+                <svg class="svg">
+                  <use
+                    xlink:href="./assets/img/sprite.svg#icon-arrow_drop_down"></use>
+                </svg>
+              </a>
               <ul class="navigation__list-sublist navigation__drop-menu">
                 <li class="navigation__item">
                   <a href="#" class="navigation__link no-wrap">
@@ -60,10 +66,18 @@
         <div class="navigation__right">
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a href="#" class="navigation__link">T</a>
+              <a href="#" class="navigation__link svg-drop nav-theme">
+                <svg class="svg">
+                  <use xlink:href="./assets/img/sprite.svg#icon-moon" class="nav-theme"></use>
+                </svg>
+              </a>
             </li>
             <li class="navigation__item search-field">
-              <a href="#" class="navigation__link">Search</a>
+              <a href="#" class="navigation__link svg-drop">
+                <svg class="svg svg-search">
+                  <use xlink:href="./assets/img/sprite.svg#icon-search"></use>
+                </svg>
+              </a>
             </li>
             <div class="navigation__search-field search-input hiddenanim">
               <form action="">
@@ -73,7 +87,11 @@
                   placeholder="Search any series or movies ..."
                   class="navigation__search" />
               </form>
-              <button class="navigation__searchbtn">Search</button>
+              <button class="navigation__searchbtn">
+                <svg class="svg svg-search-inner">
+                  <use xlink:href="./assets/img/sprite.svg#icon-search"></use>
+                </svg>
+              </button>
             </div>
 
             <li class="navigation__item">
@@ -84,14 +102,27 @@
             </li>
 
             <li class="navigation__item">
-              <a href="#" class="navigation__link">Login</a>
+              <a href="#" class="navigation__link svg-drop">
+                Login
+                <svg class="svg">
+                  <use xlink:href="./assets/img/sprite.svg#icon-log-in"></use>
+                </svg>
+              </a>
             </li>
 
             <li class="navigation__item navigation__drop hidden">
-              <a href="#" class="navigation__link">UAccount</a>
+              <a href="#" class="navigation__link svg-drop">
+                <svg class="svg svg-user">
+                  <use xlink:href="./assets/img/sprite.svg#icon-user"></use>
+                </svg>
+                <svg class="svg svg-user">
+                  <use
+                    xlink:href="./assets/img/sprite.svg#icon-arrow_drop_down"></use>
+                </svg>
+              </a>
               <ul class="navigation__list-sublist navigation__drop-menu">
                 <li class="navigation__item">
-                  <a href="#" class="navigation__link">USettings</a>
+                  <a href="#" class="navigation__link">Settings</a>
                 </li>
                 <li class="navigation__item">
                   <a href="#" class="navigation__link">logout</a>
@@ -126,9 +157,24 @@
             </div>
           </div>
           <div class="banner__buttons">
-            <button class="btn banner__btn">Play Now</button>
-            <button class="btn banner__btn">Details</button>
-            <button class="btn banner__btn">Add to Watch List</button>
+            <button class="btn banner__btn svg-btn">
+              Play
+              <svg class="svg svg-btnset">
+                <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+              </svg>
+            </button>
+            <button class="btn banner__btn svg-btn">
+              Details
+              <svg class="svg svg-btnset">
+                <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+              </svg>
+            </button>
+            <button class="btn banner__btn svg-btn">
+              Add to Watch List
+              <svg class="svg svg-btnset svg-plus">
+                <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -147,9 +193,21 @@
                 alt="trending movie name"
                 class="card__img card__imgtrending" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -164,9 +222,21 @@
                 alt="trending movie name"
                 class="card__img card__imgtrending" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -181,9 +251,21 @@
                 alt="trending movie name"
                 class="card__img card__imgtrending" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -198,9 +280,21 @@
                 alt="trending movie name"
                 class="card__img card__imgtrending" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -215,9 +309,21 @@
                 alt="trending movie name"
                 class="card__img card__imgtrending" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -232,9 +338,21 @@
                 alt="trending movie name"
                 class="card__img card__imgtrending" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -249,9 +367,21 @@
                 alt="trending movie name"
                 class="card__img card__imgtrending" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -266,9 +396,21 @@
                 alt="trending movie name"
                 class="card__img card__imgtrending" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -283,9 +425,21 @@
                 alt="trending movie name"
                 class="card__img card__imgtrending" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -307,9 +461,21 @@
                 alt="trending movie name"
                 class="card__img card__imgseason" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -324,9 +490,21 @@
                 alt="trending movie name"
                 class="card__img card__imgseason" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -341,9 +519,21 @@
                 alt="trending movie name"
                 class="card__img card__imgseason" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -358,9 +548,21 @@
                 alt="trending movie name"
                 class="card__img card__imgseason" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -375,9 +577,21 @@
                 alt="trending movie name"
                 class="card__img card__imgseason" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -392,9 +606,21 @@
                 alt="trending movie name"
                 class="card__img card__imgseason" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -409,9 +635,21 @@
                 alt="trending movie name"
                 class="card__img card__imgseason" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -426,9 +664,21 @@
                 alt="trending movie name"
                 class="card__img card__imgseason" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -443,9 +693,21 @@
                 alt="trending movie name"
                 class="card__img card__imgseason" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -467,9 +729,21 @@
                 alt="trending movie name"
                 class="card__img card__imgmovie" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -484,9 +758,21 @@
                 alt="trending movie name"
                 class="card__img card__imgmovie" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -501,9 +787,21 @@
                 alt="trending movie name"
                 class="card__img card__imgmovie" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -518,9 +816,21 @@
                 alt="trending movie name"
                 class="card__img card__imgmovie" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -535,9 +845,21 @@
                 alt="trending movie name"
                 class="card__img card__imgmovie" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -552,9 +874,21 @@
                 alt="trending movie name"
                 class="card__img card__imgmovie" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -569,9 +903,21 @@
                 alt="trending movie name"
                 class="card__img card__imgmovie" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -586,9 +932,21 @@
                 alt="trending movie name"
                 class="card__img card__imgmovie" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -603,9 +961,21 @@
                 alt="trending movie name"
                 class="card__img card__imgmovie" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -627,9 +997,21 @@
                 alt="trending movie name"
                 class="card__img card__imgcomedy" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -644,9 +1026,21 @@
                 alt="trending movie name"
                 class="card__img card__imgcomedy" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -661,9 +1055,21 @@
                 alt="trending movie name"
                 class="card__img card__imgcomedy" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -678,9 +1084,21 @@
                 alt="trending movie name"
                 class="card__img card__imgcomedy" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -695,9 +1113,21 @@
                 alt="trending movie name"
                 class="card__img card__imgcomedy" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -712,9 +1142,21 @@
                 alt="trending movie name"
                 class="card__img card__imgcomedy" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -729,9 +1171,21 @@
                 alt="trending movie name"
                 class="card__img card__imgcomedy" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -746,9 +1200,21 @@
                 alt="trending movie name"
                 class="card__img card__imgcomedy" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -763,9 +1229,21 @@
                 alt="trending movie name"
                 class="card__img card__imgcomedy" />
               <div class="btnstack">
-                <button class="addbtn">+</button>
-                <button class="detailbtn">i</button>
-                <button class="playbtn">p</button>
+                <button class="addbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <button class="detailbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="playbtn svg-btn-mini">
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="card__details">
@@ -781,7 +1259,12 @@
         <h2 class="section__heading">FAQ's</h2>
         <div class="section__visible">
           <p class="question"><b>Q:</b> Do you have Premium Services?</p>
-          <p class="icon faq-icon">+</p>
+          <p class="icon faq-icon">
+            <svg class="svg svg-btnset">
+              <use
+                xlink:href="./assets/img/sprite.svg#icon-chevron-thin-down"></use>
+            </svg>
+          </p>
         </div>
         <div class="section__invisible">
           <p class="answer">
@@ -791,7 +1274,12 @@
         </div>
         <div class="section__visible">
           <p class="question"><b>Q:</b> How can I watch movies on your site?</p>
-          <p class="icon faq-icon">+</p>
+          <p class="icon faq-icon">
+            <svg class="svg svg-btnset">
+              <use
+                xlink:href="./assets/img/sprite.svg#icon-chevron-thin-down"></use>
+            </svg>
+          </p>
         </div>
         <div class="section__invisible">
           <p class="answer">
@@ -806,7 +1294,12 @@
           <p class="question">
             <b>Q:</b> Do I need to create an account for booking movies ticket?
           </p>
-          <p class="icon faq-icon">+</p>
+          <p class="icon faq-icon">
+            <svg class="svg svg-btnset">
+              <use
+                xlink:href="./assets/img/sprite.svg#icon-chevron-thin-down"></use>
+            </svg>
+          </p>
         </div>
         <div class="section__invisible">
           <p class="answer">
@@ -819,7 +1312,12 @@
           <p class="question">
             <b>Q:</b> Can I download movies for offline viewing?
           </p>
-          <p class="icon faq-icon">+</p>
+          <p class="icon faq-icon">
+            <svg class="svg svg-btnset">
+              <use
+                xlink:href="./assets/img/sprite.svg#icon-chevron-thin-down"></use>
+            </svg>
+          </p>
         </div>
         <div class="section__invisible">
           <p class="answer">
@@ -832,7 +1330,12 @@
             <b>Q:</b> Are there any age restrictions for accessing certain
             movies?
           </p>
-          <p class="icon faq-icon">+</p>
+          <p class="icon faq-icon">
+            <svg class="svg svg-btnset">
+              <use
+                xlink:href="./assets/img/sprite.svg#icon-chevron-thin-down"></use>
+            </svg>
+          </p>
         </div>
         <div class="section__invisible">
           <p class="answer">
@@ -845,7 +1348,12 @@
           <p class="question">
             <b>Q:</b> How frequently are new movies added to the site?
           </p>
-          <p class="icon faq-icon">+</p>
+          <p class="icon faq-icon">
+            <svg class="svg svg-btnset">
+              <use
+                xlink:href="./assets/img/sprite.svg#icon-chevron-thin-down"></use>
+            </svg>
+          </p>
         </div>
         <div class="section__invisible">
           <p class="answer">
@@ -858,7 +1366,12 @@
             <b>Q:</b> Can I request a specific movie to be added to the
             collection?
           </p>
-          <p class="icon faq-icon">+</p>
+          <p class="icon faq-icon">
+            <svg class="svg svg-btnset">
+              <use
+                xlink:href="./assets/img/sprite.svg#icon-chevron-thin-down"></use>
+            </svg>
+          </p>
         </div>
         <div class="section__invisible">
           <p class="answer">
@@ -870,7 +1383,12 @@
           <p class="question">
             <b>Q:</b> Can I leave reviews or ratings for movies I've watched?
           </p>
-          <p class="icon faq-icon">+</p>
+          <p class="icon faq-icon">
+            <svg class="svg svg-btnset">
+              <use
+                xlink:href="./assets/img/sprite.svg#icon-chevron-thin-down"></use>
+            </svg>
+          </p>
         </div>
         <div class="section__invisible">
           <p class="answer">
@@ -925,5 +1443,11 @@
         </svg>
       </a>
     </footer>
+
+    <div class="chatbot">
+      <svg class="svg svg-bot">
+        <use xlink:href="./assets/img/sprite.svg#icon-probot"></use>
+      </svg>
+    </div>
   </body>
 </html>

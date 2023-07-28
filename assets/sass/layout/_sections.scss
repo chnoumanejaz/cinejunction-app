@@ -26,7 +26,12 @@
     max-height: 0;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease;
+    font-size: 1.55rem;
+    transform: translateY(-3rem);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    & b {
+      color: $grey-color-light-2;
+    }
     & .answer {
       border-bottom: 2px solid $grey-color-light;
       margin-bottom: 3rem;
@@ -41,11 +46,15 @@
     margin-bottom: 3rem;
     color: $grey-color-light-2;
     cursor: pointer;
-    transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     &--active + .section__invisible {
       visibility: visible;
-      max-height: 20rem;
+      max-height: fit-content;
       opacity: 1;
+      transform: translateY(-1rem);
+    }
+    & p:nth-child(2) {
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
   }
 }

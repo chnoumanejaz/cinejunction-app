@@ -22,7 +22,7 @@
     display: flex;
     flex-direction: column-reverse;
     gap: 1rem;
-    transition: all 0.5s ease-in;
+    transition: all 0.5s cubic-bezier(0.6, 0.28, 0.735, 0.045);
   }
   &:hover .btnstack {
     visibility: visible;
@@ -38,7 +38,7 @@
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    transition: all 0.2s ease-in;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     &:active {
       filter: blur(2px);
       transform: translateY(0.2rem);

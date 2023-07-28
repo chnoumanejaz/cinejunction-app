@@ -1,0 +1,16 @@
+.chatbot{
+    position: fixed;
+    bottom: 6rem;
+    right: 3rem;
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgba(#000, .4);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 80px $secondary-color;
+    cursor: pointer;
+    z-index: 6;
+}

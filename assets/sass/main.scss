@@ -4,7 +4,6 @@
 
 @import './base/base';
 
-@import './components/svgs';
 @import './components/buttons';
 @import './components/card';
 
@@ -14,4 +13,7 @@
 @import './layout/sections';
 @import './layout/footer';
 
+
+@import './components/svgs';
+@import './components/chatbot';
 @import './abstracts/utility';

@@ -1,8 +1,42 @@
-.svg{
-    width: 2.5rem;
-    height: 2.5rem;
-    fill: $white-color;
-    &-up{
-        transform: rotate(180deg);
+.svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  fill: $white-color;
+  &-up {
+    transform: rotate(180deg);
+  }
+  &-drop,
+  &-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    &:hover,
+    &:any-link {
+      border: none;
     }
+  }
+  &-btn-mini {
+    display: grid;
+    place-items: center;
+  }
+  &-user {
+    margin-bottom: 1rem;
+  }
+  &-search,
+  &-search-inner,
+  &-btnset {
+    width: 2rem;
+    height: 2rem;
+  }
+  &-search-inner {
+    fill: $secondary-color;
+  }
+  &-plus {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+  &-bot{
+    width: 3.5rem;
+    height: 3.5rem;
+  }
 }
