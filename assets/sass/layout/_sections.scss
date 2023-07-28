@@ -1,0 +1,51 @@
+.section {
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  &__heading {
+    margin-bottom: 2rem;
+    font-weight: 100;
+  }
+  &__cards {
+    display: flex;
+    overflow: hidden;
+    transition: all 0.3s;
+    &:hover {
+      overflow: auto;
+    }
+  }
+  &-faq {
+    text-align: center;
+    padding-top: 2rem;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 65%;
+  }
+  &__invisible {
+    text-align: left;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    & .answer {
+      border-bottom: 2px solid $grey-color-light;
+      margin-bottom: 3rem;
+      overflow: hidden;
+    }
+  }
+
+  &__visible {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $grey-color;
+    margin-bottom: 3rem;
+    color: $grey-color-light-2;
+    cursor: pointer;
+    transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    &--active + .section__invisible {
+      visibility: visible;
+      max-height: 20rem;
+      opacity: 1;
+    }
+  }
+}

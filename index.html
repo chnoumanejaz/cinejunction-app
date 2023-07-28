@@ -4,15 +4,926 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cine Junction | Home</title>
+    <meta name="title" content="cinejunction app" />
     <meta
       name="description"
       content="Explore a website with complete movie information and easily book cinema tickets all in one place." />
     <meta name="author" content="M Nouman Ejaz" />
-
-    <link rel="stylesheet" href="style.css" />
-    <script type="module" src=""></script>
+    <link rel="stylesheet" href="./assets/sass/main.css" />
+    <script type="module" src="./assets/js/main.js"></script>
   </head>
   <body>
-    <h1>Basic Structure</h1>
+    <!-- Header -->
+    <header class="header">
+      <!-- Navigation -->
+      <nav class="navigation">
+        <div class="navigation__center">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="#" class="navigation__link navigation__link--active"
+                >Home</a
+              >
+            </li>
+
+            <li class="navigation__item">
+              <a href="#movies" class="navigation__link">Movies</a>
+            </li>
+
+            <li class="navigation__item">
+              <a href="#series" class="navigation__link">Series</a>
+            </li>
+
+            <li class="navigation__item navigation__drop">
+              <a href="#" class="navigation__link">More</a>
+              <ul class="navigation__list-sublist navigation__drop-menu">
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link no-wrap">
+                    Web Settings
+                  </a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link">About Us</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link">Contact Us</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="navigation__center">
+          <img
+            src="./assets/img/logo.png"
+            alt="Cine Junction Logo"
+            class="navigation__logo" />
+        </div>
+        <div class="navigation__right">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">T</a>
+            </li>
+            <li class="navigation__item search-field">
+              <a href="#" class="navigation__link">Search</a>
+            </li>
+            <div class="navigation__search-field search-input hiddenanim">
+              <form action="">
+                <input
+                  role="search box"
+                  type="text"
+                  placeholder="Search any series or movies ..."
+                  class="navigation__search" />
+              </form>
+              <button class="navigation__searchbtn">Search</button>
+            </div>
+
+            <li class="navigation__item">
+              <a href="#" class="navigation__link no-wrap">Watch List</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">Cinema</a>
+            </li>
+
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">Login</a>
+            </li>
+
+            <li class="navigation__item navigation__drop hidden">
+              <a href="#" class="navigation__link">UAccount</a>
+              <ul class="navigation__list-sublist navigation__drop-menu">
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link">USettings</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link">logout</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Poster in the header -->
+      <div class="banner">
+        <div class="banner__img">
+          <img
+            src="./assets/img/poster.jpg"
+            alt="Poster Image"
+            class="banner__image" />
+        </div>
+        <div class="banner__right">
+          <div class="banner__plot">
+            Premise. Set in Madrid, a mysterious man known as the "Professor"
+            recruits a group of eight people, who choose city names as their
+            aliases, to carry out an ambitious plan that involves.
+          </div>
+          <div class="banner__date">
+            <div class="one">
+              <b>Web Series</b>
+            </div>
+            <div class="two">
+              <b>Release Date:</b>
+              <p>22 June, 2008</p>
+            </div>
+          </div>
+          <div class="banner__buttons">
+            <button class="btn banner__btn">Play Now</button>
+            <button class="btn banner__btn">Details</button>
+            <button class="btn banner__btn">Add to Watch List</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Page -->
+    <main class="main">
+      <!-- Trending section -->
+      <section class="section section-trending">
+        <h2 class="section__heading">Top Trending</h2>
+        <div class="section__cards">
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/trending poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgtrending" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Barbie</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/trending poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgtrending" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Barbie</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/trending poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgtrending" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Barbie</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/trending poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgtrending" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Barbie</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/trending poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgtrending" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Barbie</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/trending poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgtrending" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Barbie</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/trending poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgtrending" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Barbie</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/trending poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgtrending" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Barbie</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/trending poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgtrending" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Barbie</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seasons Section -->
+      <section class="section section-seasons">
+        <h2 class="section__heading">Web Series</h2>
+        <div class="section__cards">
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/season poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgseason" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Stranger Things</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/season poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgseason" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Stranger Things</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/season poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgseason" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Stranger Things</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/season poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgseason" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Stranger Things</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/season poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgseason" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Stranger Things</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/season poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgseason" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Stranger Things</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/season poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgseason" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Stranger Things</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/season poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgseason" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Stranger Things</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/season poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgseason" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Stranger Things</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Movies Section -->
+      <section class="section section-movies">
+        <h2 class="section__heading">Movies</h2>
+        <div class="section__cards">
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/movie poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgmovie" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Fast X</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/movie poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgmovie" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Fast X</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/movie poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgmovie" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Fast X</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/movie poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgmovie" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Fast X</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/movie poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgmovie" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Fast X</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/movie poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgmovie" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Fast X</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/movie poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgmovie" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Fast X</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/movie poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgmovie" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Fast X</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/movie poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgmovie" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Fast X</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comedy Section -->
+      <section class="section section-comedy">
+        <h2 class="section__heading">Comedy</h2>
+        <div class="section__cards">
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/comedy poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgcomedy" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Nikka Zaildar 3</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/comedy poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgcomedy" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Nikka Zaildar 3</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/comedy poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgcomedy" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Nikka Zaildar 3</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/comedy poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgcomedy" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Nikka Zaildar 3</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/comedy poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgcomedy" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Nikka Zaildar 3</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/comedy poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgcomedy" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Nikka Zaildar 3</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/comedy poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgcomedy" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Nikka Zaildar 3</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/comedy poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgcomedy" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Nikka Zaildar 3</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <img
+                src="./assets/img/comedy poster.jpg"
+                alt="trending movie name"
+                class="card__img card__imgcomedy" />
+              <div class="btnstack">
+                <button class="addbtn">+</button>
+                <button class="detailbtn">i</button>
+                <button class="playbtn">p</button>
+              </div>
+            </div>
+            <div class="card__details">
+              <h4 class="card__title">Nikka Zaildar 3</h4>
+              <p class="card__date"><i>Release: </i>2023-05-18</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="section section-faq">
+        <h2 class="section__heading">FAQ's</h2>
+        <div class="section__visible">
+          <p class="question"><b>Q:</b> Do you have Premium Services?</p>
+          <p class="icon faq-icon">+</p>
+        </div>
+        <div class="section__invisible">
+          <p class="answer">
+            <b>Ans:</b> No, We don't have it yet. You can enjoy it totally free
+            of cost. Maybe we add it after sometime.
+          </p>
+        </div>
+        <div class="section__visible">
+          <p class="question"><b>Q:</b> How can I watch movies on your site?</p>
+          <p class="icon faq-icon">+</p>
+        </div>
+        <div class="section__invisible">
+          <p class="answer">
+            <b>Ans:</b> As of now, we don't have the streaming service available
+            on our site. However, you can still enjoy our movie content totally
+            free of cost. We are continuously working to enhance your
+            experience, and we may consider adding the streaming service in the
+            future.
+          </p>
+        </div>
+        <div class="section__visible">
+          <p class="question">
+            <b>Q:</b> Do I need to create an account for booking movies ticket?
+          </p>
+          <p class="icon faq-icon">+</p>
+        </div>
+        <div class="section__invisible">
+          <p class="answer">
+            <b>Ans:</b> Yes, you have to create an account for booking movie
+            tickets. Having an account will make the booking process more
+            convenient and allow you to manage your reservations easily.
+          </p>
+        </div>
+        <div class="section__visible">
+          <p class="question">
+            <b>Q:</b> Can I download movies for offline viewing?
+          </p>
+          <p class="icon faq-icon">+</p>
+        </div>
+        <div class="section__invisible">
+          <p class="answer">
+            <b>Ans:</b> As of now, we don't offer the option to download movies
+            for offline viewing on our platform.
+          </p>
+        </div>
+        <div class="section__visible">
+          <p class="question">
+            <b>Q:</b> Are there any age restrictions for accessing certain
+            movies?
+          </p>
+          <p class="icon faq-icon">+</p>
+        </div>
+        <div class="section__invisible">
+          <p class="answer">
+            <b>Ans:</b> No, there are no age restrictions for accessing certain
+            movies on our website. All our movie content is accessible to users
+            of all ages.
+          </p>
+        </div>
+        <div class="section__visible">
+          <p class="question">
+            <b>Q:</b> How frequently are new movies added to the site?
+          </p>
+          <p class="icon faq-icon">+</p>
+        </div>
+        <div class="section__invisible">
+          <p class="answer">
+            <b>Ans:</b> New movies are added to our site in real-time, ensuring
+            that you have access to the latest and most up-to-date content.
+          </p>
+        </div>
+        <div class="section__visible">
+          <p class="question">
+            <b>Q:</b> Can I request a specific movie to be added to the
+            collection?
+          </p>
+          <p class="icon faq-icon">+</p>
+        </div>
+        <div class="section__invisible">
+          <p class="answer">
+            <b>Ans:</b> Absolutely! We value our users' preferences, and you can
+            certainly request a specific movie to be added to our collection.
+          </p>
+        </div>
+        <div class="section__visible">
+          <p class="question">
+            <b>Q:</b> Can I leave reviews or ratings for movies I've watched?
+          </p>
+          <p class="icon faq-icon">+</p>
+        </div>
+        <div class="section__invisible">
+          <p class="answer">
+            <b>Ans:</b> As of now, since we don't have streaming available on
+            our site, leaving reviews or ratings for movies you've watched is
+            not yet possible. However, we are continuously working to enhance
+            our services, and in the future, when we introduce streaming
+            features, we may consider incorporating the option for users to
+            leave reviews and ratings.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-left">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="#" class="footer__link">About Us</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Contact Us</a>
+          </li>
+          <li class="footer__item">Comapny</li>
+          <li class="footer__item">Partners</li>
+          <li class="footer__item">Market</li>
+        </ul>
+      </div>
+      <div class="footer-center">
+        <ul class="footer__list">
+          <li class="footer__item">Watch list</li>
+          <li class="footer__item">Movies</li>
+          <li class="footer__item">Web Series</li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Cinema</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Create Account</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-right">
+        <img src="./assets/img/logo.png" alt="cinejunction Logo" />
+        <form action="">
+          <input type="email" placeholder="Write your Email here" required />
+          <button class="btn btn-footer">Join our news Letter</button>
+        </form>
+      </div>
+      <a href="#" class="footer__top-icon">
+        <svg class="svg svg-up">
+          <use
+            xlink:href="./assets/img/sprite.svg#icon-chevron-thin-down"></use>
+        </svg>
+      </a>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,92 @@
+.card {
+  padding: 1rem;
+  transition: all 0.2s;
+  position: relative;
+  &__img {
+    width: 15rem;
+    height: 20rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    transform: scale(1);
+    position: relative;
+    transition: all 0.5s;
+    // background-size: contain;
+  }
+  .btnstack {
+    transform: translateY(-17rem);
+    position: absolute;
+    top: 2.5rem;
+    left: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+    transition: all 0.5s ease-in;
+  }
+  &:hover .btnstack {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(4rem);
+  }
+  .addbtn,
+  .detailbtn,
+  .playbtn {
+    background-color: rgba($secondary-color, 0.9);
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    &:active {
+      filter: blur(2px);
+      transform: translateY(0.2rem);
+    }
+    &:hover {
+      //   border-radius: 1rem;
+      border: 1px solid $grey-color-light-2;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // align-items: center;
+    font-size: 1.5rem;
+    color: $grey-color-light-2;
+  }
+  &__title {
+    font-weight: 100;
+    letter-spacing: 0.05rem;
+  }
+  &__date {
+    font-size: 1.3rem;
+  }
+  &__date i {
+    color: $grey-color-light;
+  }
+  &:hover &__imgtrending,
+  &:hover &__imgseason,
+  &:hover &__imgmovie,
+  &:hover &__imgcomedy {
+    opacity: 0.6;
+    border-radius: 6px;
+    transform: scale(1.05);
+    width: 30rem;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  &:hover &__imgtrending {
+    content: url(../../../assets/img/trending\ banner.jpg);
+  }
+  &:hover &__imgseason {
+    content: url(../../../assets/img/season\ banner.jpg);
+  }
+  &:hover &__imgmovie {
+    content: url(../../../assets/img/movie\ banner.jpg);
+  }
+  &:hover &__imgcomedy {
+    content: url(../../../assets/img/comedy\ banner.jpg);
+  }
+}

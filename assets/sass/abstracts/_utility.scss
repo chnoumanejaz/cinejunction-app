@@ -1,0 +1,14 @@
+/*
+  Utility Classes / Helpers
+*/
+.no-wrap {
+  white-space: nowrap;
+}
+.hiddenanim {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s;
+}
+.hidden{
+    display: none;
+}
