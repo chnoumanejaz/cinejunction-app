@@ -1,7 +1,5 @@
 .footer {
   background-color: $primary-color-dark;
-  //   max-height: 100vh;
-  // height: 95vh;
   font-size: 1.5rem;
   color: $grey-color-light-2;
   max-width: 100%;
@@ -45,7 +43,7 @@
     color: inherit;
     padding: 1rem 0;
   }
-  &__top-icon{
+  &__top-icon {
     position: absolute;
     height: 4rem;
     width: 4rem;
@@ -58,6 +56,30 @@
     @include absolute-center;
     transform: translateY(8rem);
     // transition: all .5s ease;
-    animation: updown .5s infinite alternate;
+    animation: updown 0.5s infinite alternate;
+  }
+  &--copyright {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba($primary-color-light, 0.5);
+    padding: 0.3rem 1.2rem;
+    border-radius: 5px 5px 0 0;
+    letter-spacing: 0.05rem;
+    word-spacing: 0.1rem;
+    display: flex;
+    gap: 0.5rem;
+    & span {
+      padding: 0.1rem 0.3rem;
+      border: 1px solid transparent;
+      text-decoration: underline;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.2s;
+      &:hover {
+        border-bottom: 1px solid $secondary-color;
+        text-decoration: none;
+        transform: skew(-20deg);
+      }
+    }
   }
 }

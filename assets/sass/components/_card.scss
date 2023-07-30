@@ -74,6 +74,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      &-display{
+        justify-content: flex-start;
+        gap: 2.5rem;
+        margin-bottom: 2rem;
+      }
     }
   }
   &-icon {

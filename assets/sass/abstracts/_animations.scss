@@ -6,3 +6,24 @@
     transform: translateY(7rem);
   }
 }
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes chatbotAmaze {
+  0% {
+    background-color: rgba(#000, 0.4);
+  }
+  60% {
+    background-color: rgba($secondary-color, 0.4);
+  }
+  100% {
+    background-color: rgba($primary-color-light, 0.4);
+  }
+}
