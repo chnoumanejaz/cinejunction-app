@@ -2,6 +2,8 @@
   padding: 1rem;
   transition: all 0.2s;
   position: relative;
+  width: 20rem;
+  // cursor: pointer;
   &__img {
     width: 15rem;
     height: 20rem;
@@ -9,8 +11,7 @@
     margin-bottom: 1rem;
     transform: scale(1);
     position: relative;
-    transition: all 0.5s;
-    // background-size: contain;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
   .btnstack {
     transform: translateY(-17rem);
@@ -28,6 +29,12 @@
     visibility: visible;
     opacity: 1;
     transform: translateY(4rem);
+  }
+  &:hover img {
+    opacity: 0.6;
+    border-radius: 6px;
+    transform: scale(1.05);
+    width: 18rem;
   }
   .addbtn,
   .detailbtn,
@@ -47,6 +54,13 @@
       //   border-radius: 1rem;
       border: 1px solid $grey-color-light-2;
     }
+    &--added {
+      width: fit-content;
+      padding: 0.5rem 1rem;
+      background-color: #22ca5d;
+      border-radius: 5px;
+      color: $white-color;
+    }
   }
 
   &__details {
@@ -56,10 +70,25 @@
     // align-items: center;
     font-size: 1.5rem;
     color: $grey-color-light-2;
+    &-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
   }
   &__title {
     font-weight: 100;
     letter-spacing: 0.05rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 15rem;
   }
   &__date {
     font-size: 1.3rem;
@@ -67,26 +96,17 @@
   &__date i {
     color: $grey-color-light;
   }
-  &:hover &__imgtrending,
-  &:hover &__imgseason,
-  &:hover &__imgmovie,
-  &:hover &__imgcomedy {
-    opacity: 0.6;
-    border-radius: 6px;
-    transform: scale(1.05);
-    width: 30rem;
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-  &:hover &__imgtrending {
-    content: url(../../../assets/img/trending\ banner.jpg);
-  }
-  &:hover &__imgseason {
-    content: url(../../../assets/img/season\ banner.jpg);
-  }
-  &:hover &__imgmovie {
-    content: url(../../../assets/img/movie\ banner.jpg);
-  }
-  &:hover &__imgcomedy {
-    content: url(../../../assets/img/comedy\ banner.jpg);
-  }
+
+  // &:hover &__imgtrending {
+  //   content: url(../../../assets/img/trending\ banner.jpg);
+  // }
+  // &:hover &__imgseason {
+  //   content: url(../../../assets/img/season\ banner.jpg);
+  // }
+  // &:hover &__imgmovie {
+  //   content: url(../../../assets/img/movie\ banner.jpg);
+  // }
+  // &:hover &__imgcomedy {
+  //   content: url(../../../assets/img/comedy\ banner.jpg);
+  // }
 }

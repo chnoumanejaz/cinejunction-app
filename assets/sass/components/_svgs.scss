@@ -31,12 +31,16 @@
   &-search-inner {
     fill: $secondary-color;
   }
-  &-plus {
+  &-plus,
+  &-star {
     width: 1.7rem;
     height: 1.7rem;
   }
   &-bot{
     width: 3.5rem;
     height: 3.5rem;
+  }
+  &-star{
+    fill: rgb(204, 204, 2);
   }
 }

@@ -3,12 +3,6 @@
   // height: 95vh;
   padding: 1rem;
   font-size: 1.5rem;
-  background-image: linear-gradient(
-      to right,
-      rgba($primary-color, 0.7),
-      rgba($primary-color, 0.7)
-    ),
-    url(../../../assets/img/header-banner.jpg);
   background-size: cover;
   color: $white-color;
   overflow: hidden;
@@ -96,7 +90,7 @@
     transition: all 0.3s;
   }
   &__searchbtn {
-    padding: .6rem;
+    padding: 0.6rem;
     cursor: pointer;
     background-color: rgba($grey-color-light-2, 0.9);
     border: none;
@@ -137,7 +131,7 @@
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     &:hover {
       opacity: 1;
-      transform: translateY(-.5rem);
+      transform: translateY(-0.5rem);
     }
   }
   &__right {
