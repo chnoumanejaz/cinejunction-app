@@ -89,6 +89,10 @@
                   placeholder="Search any series or movies ..."
                   class="navigation__search" />
               </form>
+              <select name="filter" id="filter" class="navigation__filter">
+                <option value="movie">Movie</option>
+                <option value="tv">Series</option>
+              </select>
               <button class="navigation__searchbtn">
                 <svg class="svg svg-search-inner">
                   <use xlink:href="./assets/img/sprite.svg#icon-search"></use>
@@ -146,5 +150,13 @@
       <div class="loader"></div>
       <div class="loader-text">Loading ...</div>
     </div>
+
+    <!-- Error and Info Messages -->
+    <section class="error-sec">
+      <div class="error">This is Error</div>
+    </section>
+    <section class="success-sec">
+      <div class="success">This is success</div>
+    </section>
   </body>
 </html>

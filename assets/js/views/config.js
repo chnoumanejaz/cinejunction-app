@@ -10,7 +10,10 @@ const imageBaseURL = 'https://image.tmdb.org/t/p/';
 const fetchDataFromServer = function (url, callback, optionaParam) {
   fetch(url)
     .then(response => response.json())
-    .then(data => callback(data, optionaParam));
+    .then(data => callback(data, optionaParam))
+    .catch(err => {
+      console.log(err);
+    });
 };
 
-export {imageBaseURL, api_key, fetchDataFromServer}
+export { imageBaseURL, api_key, fetchDataFromServer };

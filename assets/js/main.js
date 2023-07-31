@@ -1,7 +1,7 @@
 'use strict';
 
 import { api_key, fetchDataFromServer, imageBaseURL } from './views/config.js';
-import { onSearchORClick } from './views/searched.js';
+import { onSearchORClick, onSearchQuery } from './views/searched.js';
 import { showCinema } from './views/cinema.js';
 import { renderInitialHtml } from './views/loadInitials.js';
 
@@ -45,6 +45,7 @@ setTimeout(() => {
     const logo = e.target.closest('.navigation__logo');
     const home = e.target.closest('.navigation__link');
     const searchBtn = e.target.closest('.navigation__searchbtn');
+    const searchFilter = e.target.closest('.navigation__filter');
 
     if (link) {
       allLinks.forEach(link => {
@@ -54,7 +55,7 @@ setTimeout(() => {
     }
     if (logo || home?.textContent.trim() === 'Home')
       window.open('index.html', '_self');
-    if (field || input || searchBtn) return;
+    if (field || input || searchBtn || searchFilter) return;
     else {
       searchOpen = false;
       searchInput.classList.add('hiddenanim');
@@ -149,12 +150,14 @@ setTimeout(() => {
   const navigation = document.querySelector('nav');
 
   navigation.addEventListener('click', function (e) {
+    const search = e.target.closest('.svg-search');
     const click = e.target.textContent.trim();
 
     if (click === 'Movies' || click === 'Series') {
       onSearchORClick(main, click);
     }
     if (click === 'Cinema') showCinema(main);
+    if (search) onSearchQuery(main);
   });
 
   // Signup login form handling
@@ -217,7 +220,12 @@ setTimeout(() => {
             <div class="banner__right">
             <div class="banner__heading">Trending Now</div>
               <div class="banner__plot">
-                ${obj.overview}
+                ${
+                  obj.overview.length > 450
+                    ? obj.overview.slice(0, 450)
+                    : obj.overview
+                }
+                ${obj.overview.length > 450 ? '...' : ''}
               </div>
               <div class="banner__date">
                 <div class="one">
@@ -267,6 +275,7 @@ setTimeout(() => {
 
   // Get data of All the Trendings movies of present Week
   const trendingSectionMovies = document.getElementById('trending-movies');
+  let trendingMNo = 0;
 
   const trendingSectionMoviesCall = function ({ results: movieList }) {
     for (const [index, movie] of movieList.entries()) {
@@ -287,22 +296,46 @@ setTimeout(() => {
                 alt="Trending Movie ${title}"
                 loading = "lazy"
                 class="card__img card__imgtrending" />
-              <div class="btnstack">
-                <button class="addbtn svg-btn-mini">
-                  <svg class="svg svg-btnset">
-                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
-                  </svg>
-                </button>
-                <button class="detailbtn svg-btn-mini">
-                  <svg class="svg svg-btnset">
-                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
-                  </svg>
-                </button>
-                <button class="playbtn svg-btn-mini">
-                  <svg class="svg svg-btnset">
-                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
-                  </svg>
-                </button>
+              <div class="btnstack btnstacktrendingM${trendingMNo}">
+                  ${
+                    createButtonWithOnClick(
+                      id,
+                      'playbtn',
+                      '.btnstacktrendingM' + trendingMNo
+                    ) === undefined
+                      ? ''
+                      : createButtonWithOnClick(
+                          id,
+                          'playbtn',
+                          '.btnstacktrendingM' + trendingMNo
+                        )
+                  }
+                  ${
+                    createButtonWithOnClick(
+                      id,
+                      'detailbtn',
+                      '.btnstacktrendingM' + trendingMNo
+                    ) === undefined
+                      ? ''
+                      : createButtonWithOnClick(
+                          id,
+                          'detailbtn',
+                          '.btnstacktrendingM' + trendingMNo
+                        )
+                  }  
+                  ${
+                    createButtonWithOnClick(
+                      id,
+                      'addbtn',
+                      '.btnstacktrendingM' + trendingMNo
+                    ) === undefined
+                      ? ''
+                      : createButtonWithOnClick(
+                          id,
+                          'addbtn',
+                          '.btnstacktrendingM' + trendingMNo
+                        )
+                  } 
               </div>
             </div>
             <div class="card__details">
@@ -325,6 +358,7 @@ setTimeout(() => {
           </div> 
           `;
       trendingSectionMovies.insertAdjacentHTML('beforeend', card);
+      trendingMNo++;
     }
   };
   fetchDataFromServer(
@@ -334,6 +368,7 @@ setTimeout(() => {
 
   // Get data of All the Trendings of present Week
   const trendingSectionall = document.getElementById('trending-all');
+  let trendingANo = 0;
 
   const trendingSectionallCall = function ({ results: allList }) {
     for (const [index, all] of allList.entries()) {
@@ -358,22 +393,46 @@ setTimeout(() => {
                 alt="Trending ${title ? title : name}"
                 loading = "lazy"
                 class="card__img" />
-              <div class="btnstack">
-                <button class="addbtn svg-btn-mini">
-                  <svg class="svg svg-btnset">
-                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
-                  </svg>
-                </button>
-                <button class="detailbtn svg-btn-mini">
-                  <svg class="svg svg-btnset">
-                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
-                  </svg>
-                </button>
-                <button class="playbtn svg-btn-mini">
-                  <svg class="svg svg-btnset">
-                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
-                  </svg>
-                </button>
+              <div class="btnstack btnstacktrendingall${trendingANo}">
+                ${
+                  createButtonWithOnClick(
+                    id,
+                    'playbtn',
+                    '.btnstacktrendingall' + trendingANo
+                  ) === undefined
+                    ? ''
+                    : createButtonWithOnClick(
+                        id,
+                        'playbtn',
+                        '.btnstacktrendingall' + trendingANo
+                      )
+                }
+                ${
+                  createButtonWithOnClick(
+                    id,
+                    'detailbtn',
+                    '.btnstacktrendingall' + trendingANo
+                  ) === undefined
+                    ? ''
+                    : createButtonWithOnClick(
+                        id,
+                        'detailbtn',
+                        '.btnstacktrendingall' + trendingANo
+                      )
+                }  
+                ${
+                  createButtonWithOnClick(
+                    id,
+                    'addbtn',
+                    '.btnstacktrendingall' + trendingANo
+                  ) === undefined
+                    ? ''
+                    : createButtonWithOnClick(
+                        id,
+                        'addbtn',
+                        '.btnstacktrendingall' + trendingANo
+                      )
+                } 
               </div>
             </div>
             <div class="card__details">
@@ -398,6 +457,7 @@ setTimeout(() => {
           </div> 
           `;
       trendingSectionall.insertAdjacentHTML('afterbegin', card);
+      trendingANo++;
 
       // Changing then header to the top trending movie
       if (index === randomIndex) changeHeaderBanner(all);
@@ -410,7 +470,7 @@ setTimeout(() => {
 
   // Get data of All the Trendings Web Series of present Week
   const trendingSectionSeries = document.getElementById('trending-series');
-
+  let trendingSNo = 0;
   const trendingSectionSeriesCall = function ({ results: allList }) {
     for (const [index, all] of allList.entries()) {
       const {
@@ -429,23 +489,47 @@ setTimeout(() => {
                 src="${imageBaseURL}original${poster_path}"
                 alt="Trending Web Series ${name}"
                 loading = "lazy"
-                class="card__img card__imgtrending" />
-              <div class="btnstack">
-                <button class="addbtn svg-btn-mini">
-                  <svg class="svg svg-btnset">
-                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
-                  </svg>
-                </button>
-                <button class="detailbtn svg-btn-mini">
-                  <svg class="svg svg-btnset">
-                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
-                  </svg>
-                </button>
-                <button class="playbtn svg-btn-mini">
-                  <svg class="svg svg-btnset">
-                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
-                  </svg>
-                </button>
+                class="card__img" />
+              <div class="btnstack btnstacktrending${trendingSNo}">
+              ${
+                createButtonWithOnClick(
+                  id,
+                  'playbtn',
+                  '.btnstacktrending' + trendingSNo
+                ) === undefined
+                  ? ''
+                  : createButtonWithOnClick(
+                      id,
+                      'playbtn',
+                      '.btnstacktrending' + trendingSNo
+                    )
+              }
+              ${
+                createButtonWithOnClick(
+                  id,
+                  'detailbtn',
+                  '.btnstacktrending' + trendingSNo
+                ) === undefined
+                  ? ''
+                  : createButtonWithOnClick(
+                      id,
+                      'detailbtn',
+                      '.btnstacktrending' + trendingSNo
+                    )
+              }  
+              ${
+                createButtonWithOnClick(
+                  id,
+                  'addbtn',
+                  '.btnstacktrending' + trendingSNo
+                ) === undefined
+                  ? ''
+                  : createButtonWithOnClick(
+                      id,
+                      'addbtn',
+                      '.btnstacktrending' + trendingSNo
+                    )
+              } 
               </div>
             </div>
             <div class="card__details">
@@ -468,6 +552,7 @@ setTimeout(() => {
           </div> 
           `;
       trendingSectionSeries.insertAdjacentHTML('beforeend', card);
+      trendingSNo++;
     }
   };
   fetchDataFromServer(
@@ -477,7 +562,7 @@ setTimeout(() => {
 
   // Get data of All the Trendings movies of present Week
   const upcomingSectionMovies = document.getElementById('upcoming-movies');
-
+  let upcomingno = 0;
   const upcomingSectionMoviesCall = function ({ results: movieList }) {
     for (const [index, movie] of movieList.entries()) {
       const {
@@ -496,23 +581,47 @@ setTimeout(() => {
                 src="${imageBaseURL}original${poster_path}"
                 alt="${title} Upcoming movie in Cinema"
                 loading = "lazy"
-                class="card__img card__imgtrending" />
-              <div class="btnstack">
-                <button class="addbtn svg-btn-mini">
-                  <svg class="svg svg-btnset">
-                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
-                  </svg>
-                </button>
-                <button class="detailbtn svg-btn-mini">
-                  <svg class="svg svg-btnset">
-                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
-                  </svg>
-                </button>
-                <button class="playbtn svg-btn-mini">
-                  <svg class="svg svg-btnset">
-                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
-                  </svg>
-                </button>
+                class="card__img" />
+              <div class="btnstack btnstackupcoming${upcomingno}">
+              ${
+                createButtonWithOnClick(
+                  id,
+                  'playbtn',
+                  '.btnstackupcoming' + upcomingno
+                ) === undefined
+                  ? ''
+                  : createButtonWithOnClick(
+                      id,
+                      'playbtn',
+                      '.btnstackupcoming' + upcomingno
+                    )
+              }
+              ${
+                createButtonWithOnClick(
+                  id,
+                  'detailbtn',
+                  '.btnstackupcoming' + upcomingno
+                ) === undefined
+                  ? ''
+                  : createButtonWithOnClick(
+                      id,
+                      'detailbtn',
+                      '.btnstackupcoming' + upcomingno
+                    )
+              }  
+              ${
+                createButtonWithOnClick(
+                  id,
+                  'addbtn',
+                  '.btnstackupcoming' + upcomingno
+                ) === undefined
+                  ? ''
+                  : createButtonWithOnClick(
+                      id,
+                      'addbtn',
+                      '.btnstackupcoming' + upcomingno
+                    )
+              }  
               </div>
             </div>
             <div class="card__details">
@@ -535,6 +644,7 @@ setTimeout(() => {
           </div> 
           `;
       upcomingSectionMovies.insertAdjacentHTML('afterbegin', card);
+      upcomingno++;
     }
   };
   fetchDataFromServer(
@@ -549,41 +659,49 @@ setTimeout(() => {
   });
 }, 300);
 
-// // show Movies Detail when user click on i button at card
-// const detailBtns = document.querySelectorAll('.detailbtn');
+function assignIconToBtn(btnClass) {
+  if (btnClass === 'addbtn') return `plus`;
+  if (btnClass === 'detailbtn') return `info`;
+  if (btnClass === 'playbtn') return `play2`;
+}
 
-// detailBtns?.forEach(btn => {
-//   console.log(btn);
-//   btn.addEventListener('click', function () {
-//     console.log('5');
-//   });
-// });
+function createButtonWithOnClick(movieId, btnClass, parentEl) {
+  setTimeout(() => {
+    const button = document.createElement('button');
+    button.classList.add(btnClass);
+    button.classList.add('svg-btn-mini');
+    const btnHtml = `
+    <svg class="svg svg-btnset">
+    <use xlink:href="./assets/img/sprite.svg#icon-${assignIconToBtn(
+      btnClass
+    )}"></use>
+      </svg>
+      `;
+    button.innerHTML = btnHtml;
+    button.onclick = function () {
+      addToWatchList(movieId);
+    };
+    const parent = document.querySelector(parentEl);
+    parent.appendChild(button);
+  }, 600);
+}
 
-// // Added to watch List
-// const addBtn = document.querySelectorAll('.addbtn');
+function addToWatchList(movieId) {
+  const success = document.querySelector('.success-sec');
+  const successMsg = document.querySelector('.success');
+  // Success to render on page for 2.5s
+  const infoIcon = `
+      <svg class="svg">
+        <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+      </svg>`;
+  const showSuccess = function (msg) {
+    successMsg.textContent = msg;
+    successMsg.insertAdjacentHTML('afterbegin', infoIcon);
+    success.style.transform = 'translateY(3rem)';
+    setTimeout(function () {
+      success.style.transform = 'translateY(-20rem)';
+    }, 2500);
+  };
 
-// addBtn?.forEach(btn => {
-//   btn.addEventListener('click', function () {
-//     if (btn.innerHTML.trim() === 'Added to Watch List') {
-//       btn.innerHTML = 'Removed from Watch list';
-//       btn.style.backgroundColor = '#CF4647';
-//       setTimeout(() => {
-//         btn.innerHTML = `<svg class="svg svg-btnset">
-//                                 <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
-//                            </svg>`;
-//         btn.classList.remove('addbtn--added');
-//       }, 1500);
-//     } else {
-//       if (btn.innerHTML.trim() === 'Removed from Watch list') return;
-//       else {
-//         btn.innerHTML = 'Added to Watch List';
-//         btn.style.backgroundColor = '#0b7a32e8';
-//         btn.classList.add('addbtn--added');
-//       }
-//     }
-//   });
-// });
-
-// function addToWatchList() {
-//   console.log('added');
-// }
+  showSuccess('  This Feature Will work in future! Stay Tuned');
+}

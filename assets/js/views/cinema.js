@@ -57,7 +57,12 @@ export const showCinema = function (main) {
            <div class="banner__right">
              <div class="banner__heading">Now Playing</div>
              <div class="banner__plot">
-               ${obj.overview}
+                ${
+                  obj.overview.length > 450
+                    ? obj.overview.slice(0, 450)
+                    : obj.overview
+                }
+                ${obj.overview.length > 450 ? '...' : ''}
              </div>
              <div class="banner__date">
                <div class="one">
@@ -306,11 +311,4 @@ export const showCinema = function (main) {
     `https://api.themoviedb.org/3/movie/now_playing?api_key=${api_key}`,
     nowPlayingSectionMoviesCall
   );
-
-  const bookTicketBtn = document.querySelectorAll('.btn-bookticket');
-  bookTicketBtn.forEach(btn => {
-    btn.addEventListener('click', function () {
-      console.log('Hi');
-    });
-  });
 };

@@ -140,7 +140,7 @@ button {
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .card .btnstack {
-  transform: translateY(-17rem);
+  transform: translateY(-5rem);
   position: absolute;
   top: 2.5rem;
   left: 2rem;
@@ -332,6 +332,13 @@ button {
   top: 5rem;
   transition: all 0.3s;
 }
+.navigation__filter {
+  background-color: rgba(202, 202, 202, 0.9);
+  padding: 0.9rem;
+  border: none;
+  outline: none;
+  margin: 0 -0.2rem;
+}
 .navigation__searchbtn {
   padding: 0.6rem;
   cursor: pointer;
@@ -368,7 +375,8 @@ button {
   font-weight: bold;
   letter-spacing: 0.1rem;
   word-spacing: 0.3rem;
-  width: 15rem;
+  width: -moz-fit-content;
+  width: fit-content;
   text-align: center;
   border-radius: 5px;
 }
@@ -870,6 +878,37 @@ button {
 .loader-small--active {
   opacity: 1;
   visibility: visible;
+}
+
+.error-sec,
+.success-sec {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  z-index: 8;
+  transform: translateY(-20rem);
+  transition: all 0.4s ease-out;
+}
+
+.error,
+.success {
+  padding: 1.5rem;
+  font-size: 1.7rem;
+  background-color: rgb(235, 50, 50);
+  color: rgb(202, 202, 202);
+  width: auto;
+  border-radius: 10px;
+  box-shadow: var(--BOX-SHADOW);
+}
+
+.success {
+  background-color: rgba(11, 122, 50, 0.9098039216);
 }
 
 /*
