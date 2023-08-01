@@ -1,3 +1,7 @@
+/*--------------------
+  All Sections
+  --------------------
+*/
 .section {
   &:not(:last-child) {
     margin-bottom: 3rem;
@@ -17,7 +21,12 @@
     margin: 0 auto;
     max-width: 100%;
     width: 65%;
+    @include respond(phone) {
+      width: 90%;
+      text-align: left;
+    }
   }
+
   &__invisible {
     text-align: left;
     max-height: 0;
@@ -44,6 +53,9 @@
     color: $grey-color-light-2;
     cursor: pointer;
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    @include respond(phone) {
+      margin-bottom: 2rem;
+    }
     &--active + .section__invisible {
       visibility: visible;
       max-height: fit-content;
@@ -54,8 +66,145 @@
       transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
   }
-  &-movies-onsearch{
+  &-movies-onsearch {
     flex-wrap: wrap;
     overflow: auto;
+    @include respond(phone) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &-cinema {
+    margin-bottom: 3rem;
+    & .screen {
+      perspective: 30rem;
+      width: 100%;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    & .screen .svg-screen {
+      fill: $secondary-color;
+      width: 15rem;
+      height: 15rem;
+      transform: rotateX(-50deg);
+    }
+    & .section__instructions {
+      display: flex;
+      gap: 2rem;
+      justify-content: flex-start;
+      width: 8rem;
+      & div {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      & div div {
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 5px;
+        background-color: rgb(160, 128, 192);
+      }
+      & div .booked {
+        background-color: rgb(21, 163, 2);
+      }
+      & div .available {
+        background-color: $grey-color-light-2;
+      }
+    }
+  }
+  &__seats-layout {
+    padding: 3rem;
+    & .seats {
+      display: flex;
+      justify-content: center;
+      gap: 0.7rem;
+      margin-bottom: 0.7rem;
+      cursor: pointer;
+      & .svg-btnseat {
+        fill: $grey-color-light-2;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        &:hover {
+          fill: $grey-color;
+        }
+        &--active {
+          fill: $secondary-color;
+          transform: rotate(540deg) scale(1.4);
+          &:hover {
+            fill: $secondary-color;
+            transform: rotate(545deg) scale(1.2);
+          }
+        }
+        &--reserved {
+          fill: rgb(160, 128, 192);
+        }
+        &--booked {
+          fill: rgb(21, 163, 2);
+        }
+      }
+    }
+  }
+
+  & .sides-both {
+    display: flex;
+    gap: 2rem;
+    margin: 0 8rem;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    @include respond(phone) {
+      margin: 0;
+    }
+    @include respond(phone) {
+      flex-direction: column;
+    }
+    & .cinema-side {
+      transition: all 0.5s ease;
+      @include respond(phone) {
+        width: 100%;
+      }
+    }
+    & .checkout-side {
+      padding: 3rem;
+      font-size: 1.4rem;
+      color: $grey-color-light-2;
+      width: 0;
+      height: 1rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.5s ease;
+      &--active {
+        height: fit-content;
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+      }
+      &__heading {
+        color: $grey-color-light-2;
+        font-size: 1.8rem;
+        font-weight: 300;
+        letter-spacing: 0.1rem;
+        word-spacing: 0.2rem;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid $grey-color;
+        width: 100%;
+      }
+      & input {
+        padding: 0.7rem 1rem;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        width: 100%;
+        background-color: $grey-color-light-2;
+        color: #222;
+        margin-bottom: 1.5rem;
+      }
+      & .inputsDetails {
+        display: flex;
+        gap: 0.5rem;
+        width: 100%;
+      }
+      & button {
+        width: 100%;
+        letter-spacing: 0.1rem;
+      }
+    }
   }
 }

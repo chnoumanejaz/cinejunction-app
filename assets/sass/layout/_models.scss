@@ -1,3 +1,8 @@
+/*--------------------
+  Models for [Watch List], [Login], [Signup]
+  --------------------
+*/
+
 .model {
   width: auto;
   min-height: 60%;
@@ -12,6 +17,14 @@
   place-items: center;
   transform: translateY(-200rem);
   transition: all 0.5s cubic-bezier(0.23, -0.4, 0.42, 1);
+  @include respond(phone) {
+   width: 100%;
+    background-color: rgba($primary-color-light-2, .97);
+    top: 15rem;
+    right: 1.5rem;
+    left: 1.5rem;
+    padding: 2rem;
+  }
   &--active {
     transform: translateY(-0.2rem);
   }

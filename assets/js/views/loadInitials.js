@@ -97,30 +97,6 @@ export const renderInitialHtml = function () {
 
   const accountModelsHtml = `
             <!-- Models -->
-            <!-- login Model -->
-            <div class="model model-login">
-                <div class="model__heading">
-                <p>Login to your Account</p>
-                </div>
-                <div class="model__content">
-                <form action="">
-                    <label for="username">Enter Your UserName:</label>
-                    <input type="text" class="login-username" id="username" required />
-                    <label for="password">Enter Your Password:</label>
-                    <input type="text" class="login-password" id="password" required />
-                    <div class="message-bottom">
-                    Don't have an account? Create one
-                    <span class="signup-link">Signup</span>
-                    </div>
-                    <button type="submit" name="submit" class="login-btn btn">
-                    Login
-                    <svg class="svg">
-                        <use xlink:href="./assets/img/sprite.svg#icon-log-in"></use>
-                    </svg>
-                    </button>
-                </form>
-                </div>
-            </div>
 
             <!-- Signup Model -->
             <div class="model model-signup">

@@ -10,11 +10,23 @@ export const loadPage = function () {
   const loader = document.querySelector('.loader-parent');
   loader.classList.add('loader-parent--active');
 
-  setTimeout(loading => {
+  setTimeout(() => {
     loader.classList.remove('loader-parent--active');
   }, 1000);
 };
 loadPage();
+
+const success = document.querySelector('.success-sec');
+const successMsg = document.querySelector('.success');
+// Success to render on page for 2.5s
+const showSuccess = function (msg) {
+  successMsg.textContent = msg;
+  success.style.transform = 'translateY(3rem)';
+  setTimeout(function () {
+    success.style.transform = 'translateY(-20rem)';
+  }, 2500);
+};
+
 setTimeout(() => {
   renderInitialHtml();
 }, 200);
@@ -61,6 +73,19 @@ setTimeout(() => {
       searchInput.classList.add('hiddenanim');
     }
   });
+
+  // Error and Success Messages
+  const error = document.querySelector('.error-sec');
+  const errorMsg = document.querySelector('.error');
+  // Error to render on page for 2.5s
+
+  const showError = function (msg) {
+    errorMsg.textContent = msg;
+    error.style.transform = 'translateY(3rem)';
+    setTimeout(function () {
+      error.style.transform = 'translateY(-20rem)';
+    }, 2500);
+  };
 
   // FAQ'S section Design
   const faqSection = document.querySelector('.section-faq');
@@ -128,7 +153,8 @@ setTimeout(() => {
     const userArea = document.querySelector('.user-msg');
     const botArea = document.querySelector('.bot-msg');
     if (e.target.closest('.msg-area-sendbtn')) {
-      if (input.value.trim() === '') console.log('Oh write something here');
+      if (input.value.trim() === '')
+        showError('Please Write Something to start Chat ...');
       else {
         userArea.classList.remove('hiddenanim');
         userAreaMsg.textContent = input.value;
@@ -221,11 +247,11 @@ setTimeout(() => {
             <div class="banner__heading">Trending Now</div>
               <div class="banner__plot">
                 ${
-                  obj.overview.length > 450
-                    ? obj.overview.slice(0, 450)
+                  obj.overview.length > 300
+                    ? obj.overview.slice(0, 300)
                     : obj.overview
                 }
-                ${obj.overview.length > 450 ? '...' : ''}
+                ${obj.overview.length > 300 ? '...' : ''}
               </div>
               <div class="banner__date">
                 <div class="one">
@@ -458,7 +484,6 @@ setTimeout(() => {
           `;
       trendingSectionall.insertAdjacentHTML('afterbegin', card);
       trendingANo++;
-
       // Changing then header to the top trending movie
       if (index === randomIndex) changeHeaderBanner(all);
     }
@@ -657,6 +682,26 @@ setTimeout(() => {
   linkedinLink.addEventListener('click', function () {
     window.open('https://www.linkedin.com/in/chnoumanejaz/', '_blank');
   });
+
+  const removeChatBot = document.querySelector('.remove-chatbot');
+  const aboutMe = document.querySelectorAll('.about-me');
+  const chatbot = document.querySelector('.chatbot');
+  removeChatBot.addEventListener('click', function () {
+    chatbot.classList.toggle('hidden');
+    if (removeChatBot.innerHTML.trim() === 'Remove Chatbot') {
+      removeChatBot.innerHTML = 'Add ChatBot';
+      showSuccess('Chatbot Removed for you :)')
+    } else {
+      removeChatBot.innerHTML = 'Remove Chatbot';
+      showSuccess('Chatbot Added back for you :)')
+    }
+  });
+
+  aboutMe.forEach(about => {
+    about.addEventListener('click', function () {
+      window.open('https://www.linkedin.com/in/chnoumanejaz/', '_blank');
+    });
+  });
 }, 300);
 
 function assignIconToBtn(btnClass) {
@@ -683,25 +728,9 @@ function createButtonWithOnClick(movieId, btnClass, parentEl) {
     };
     const parent = document.querySelector(parentEl);
     parent.appendChild(button);
-  }, 600);
+  }, 400);
 }
 
 function addToWatchList(movieId) {
-  const success = document.querySelector('.success-sec');
-  const successMsg = document.querySelector('.success');
-  // Success to render on page for 2.5s
-  const infoIcon = `
-      <svg class="svg">
-        <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
-      </svg>`;
-  const showSuccess = function (msg) {
-    successMsg.textContent = msg;
-    successMsg.insertAdjacentHTML('afterbegin', infoIcon);
-    success.style.transform = 'translateY(3rem)';
-    setTimeout(function () {
-      success.style.transform = 'translateY(-20rem)';
-    }, 2500);
-  };
-
   showSuccess('  This Feature Will work in future! Stay Tuned');
 }

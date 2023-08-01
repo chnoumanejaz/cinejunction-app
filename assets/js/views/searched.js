@@ -53,11 +53,11 @@ export function onSearchORClick(main, type) {
         }</div>
           <div class="banner__plot">
             ${
-              obj.overview.length > 450
-                ? obj.overview.slice(0, 450)
+              obj.overview.length > 300
+                ? obj.overview.slice(0, 300)
                 : obj.overview
             }
-            ${obj.overview.length > 450 ? '...' : ''}
+            ${obj.overview.length > 300 ? '...' : ''}
           </div>
           <div class="banner__date">
             <div class="one">
@@ -283,57 +283,57 @@ export const onSearchQuery = function (main) {
     const changeHeaderBanner = function (obj) {
       if (headerChange === false) {
         const headerHTML = `
-        <div class="banner">
-        <div class="banner__img">
-          <img
-            src="${imageBaseURL}original${obj.poster_path}"
-            alt="${obj.title ? obj.title : obj.name} Image"
-            class="banner__image" />
-        </div>
-        <div class="banner__right">
-        <div class="banner__heading no-wrap">Searched ${
-          obj.title ? 'Movies ' : 'Web Series'
-        }</div>
-          <div class="banner__plot">
-            ${
-              obj.overview.length > 450
-                ? obj.overview.slice(0, 450)
-                : obj.overview
-            }
-            ${obj.overview.length > 450 ? '...' : ''}
-          </div>
-          <div class="banner__date">
-            <div class="one">
-              <b>${obj.title ? 'Movie: ' : 'Web Series:'}</b>
-              ${obj.title ? obj.title : obj.name}
+            <div class="banner">
+            <div class="banner__img">
+              <img
+                src="${imageBaseURL}original${obj.poster_path}"
+                alt="${obj.title ? obj.title : obj.name} Image"
+                class="banner__image" />
             </div>
-            <div class="two">
-              <b>Release Date:</b>
-              <p>${obj.release_date ? obj.release_date : obj.first_air_date}</p>
+            <div class="banner__right">
+            <div class="banner__heading no-wrap">Searched ${
+              obj.title ? 'Movies ' : 'Web Series'
+            }</div>
+              <div class="banner__plot">
+                ${
+                  obj.overview.length > 300
+                    ? obj.overview.slice(0, 300)
+                    : obj.overview
+                }
+                ${obj.overview.length > 300 ? '...' : ''}
+              </div>
+              <div class="banner__date">
+                <div class="one">
+                  <b>${obj.title ? 'Movie: ' : 'Web Series:'}</b>
+                  ${obj.title ? obj.title : obj.name}
+                </div>
+                <div class="two">
+                  <b>Release Date:</b>
+                  <p>${obj.release_date ? obj.release_date : obj.first_air_date}</p>
+                </div>
+              </div>
+              <div class="banner__buttons">
+                <button class="btn banner__btn svg-btn">
+                  Play
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
+                  </svg>
+                </button>
+                <button class="btn banner__btn svg-btn">
+                  Details
+                  <svg class="svg svg-btnset">
+                    <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
+                  </svg>
+                </button>
+                <button class="btn banner__btn svg-btn no-wrap">
+                  Add to Watch List
+                  <svg class="svg svg-btnset svg-plus">
+                    <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
+                  </svg>
+                </button>
+              </div>
             </div>
-          </div>
-          <div class="banner__buttons">
-            <button class="btn banner__btn svg-btn">
-              Play
-              <svg class="svg svg-btnset">
-                <use xlink:href="./assets/img/sprite.svg#icon-play2"></use>
-              </svg>
-            </button>
-            <button class="btn banner__btn svg-btn">
-              Details
-              <svg class="svg svg-btnset">
-                <use xlink:href="./assets/img/sprite.svg#icon-info"></use>
-              </svg>
-            </button>
-            <button class="btn banner__btn svg-btn no-wrap">
-              Add to Watch List
-              <svg class="svg svg-btnset svg-plus">
-                <use xlink:href="./assets/img/sprite.svg#icon-plus"></use>
-              </svg>
-            </button>
-          </div>
-        </div>
-        </div>
+            </div>
      `;
         banner.innerHTML = headerHTML;
         const gradientString = `linear-gradient(to right, rgba(0,0,0, 0.7), rgba(0,0,0, 0.7))`;
@@ -426,7 +426,6 @@ export const onSearchQuery = function (main) {
           id,
         } = all;
 
-        // console.log(index === null)
         changeHeaderBanner(all);
         const html = changeHtml(all);
         displaySection.insertAdjacentHTML('beforeend', html);

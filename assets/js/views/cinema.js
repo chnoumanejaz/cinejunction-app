@@ -6,6 +6,29 @@ import {
   imageBaseURL,
 } from '../../js/views/config.js';
 import { loadPage } from '../main.js';
+import { checkoutTickets } from './checkout.js';
+
+const success = document.querySelector('.success-sec');
+const successMsg = document.querySelector('.success');
+// Success to render on page for 2.5s
+const showSuccess = function (msg) {
+  successMsg.textContent = msg;
+  success.style.transform = 'translateY(3rem)';
+  setTimeout(function () {
+    success.style.transform = 'translateY(-20rem)';
+  }, 2500);
+};
+// Error and Success Messages
+const error = document.querySelector('.error-sec');
+const errorMsg = document.querySelector('.error');
+// Error to render on page for 2.5s
+const showError = function (msg) {
+  errorMsg.textContent = msg;
+  error.style.transform = 'translateY(3rem)';
+  setTimeout(function () {
+    error.style.transform = 'translateY(-20rem)';
+  }, 2500);
+};
 
 export const showCinema = function (main) {
   loadPage();
@@ -58,11 +81,11 @@ export const showCinema = function (main) {
              <div class="banner__heading">Now Playing</div>
              <div class="banner__plot">
                 ${
-                  obj.overview.length > 450
-                    ? obj.overview.slice(0, 450)
+                  obj.overview.length > 300
+                    ? obj.overview.slice(0, 300)
                     : obj.overview
                 }
-                ${obj.overview.length > 450 ? '...' : ''}
+                ${obj.overview.length > 300 ? '...' : ''}
              </div>
              <div class="banner__date">
                <div class="one">
@@ -111,6 +134,7 @@ export const showCinema = function (main) {
 
   // Get data of All the Trendings movies of present Week
   const upcomingSectionMovies = document.getElementById('upcoming-movies2');
+  let upcomingno = 0;
   const upcomingSectionMoviesCall = function ({ results: movieList }) {
     for (const [index, movie] of movieList.entries()) {
       const {
@@ -129,7 +153,7 @@ export const showCinema = function (main) {
                 src="${imageBaseURL}original${poster_path}"
                 alt="${title} Upcoming movie in Cinema"
                 loading = "lazy"
-                class="card__img card__imgtrending" />
+                class="card__img" />
               <div class="btnstack">
                 <button class="addbtn svg-btn-mini">
                   <svg class="svg svg-btnset">
@@ -148,7 +172,7 @@ export const showCinema = function (main) {
                 </button>
               </div>
             </div>
-            <div class="card__details">
+            <div class="card__details card__details${upcomingno}">
               <h4 class="card__title">${title}</h4>
                 <div class="card__details-bottom">
                       <p class="card__date"><i>Release: </i>${
@@ -164,11 +188,17 @@ export const showCinema = function (main) {
                         ${vote_average.toFixed(1)}
                       </p>
                 </div>
-                <button class="btn btn-bookticket">Book Ticket</button>
+                ${
+                  createButtonWithOnClick(id, '.card__details' + upcomingno) ===
+                  undefined
+                    ? ''
+                    : createButtonWithOnClick(id, '.card__details' + upcomingno)
+                }         
             </div>
           </div> 
           `;
       upcomingSectionMovies.insertAdjacentHTML('beforeend', card);
+      upcomingno++;
     }
   };
   fetchDataFromServer(
@@ -178,6 +208,7 @@ export const showCinema = function (main) {
 
   // Get data of All the Trendings Web Series of present Week
   const nowPlayingSectionSeries = document.getElementById('Now-PlayingSeries');
+  let nowPlayingS = 0;
   const nowPlayingSectionSeriesCall = function ({ results: allList }) {
     for (const [index, all] of allList.entries()) {
       const {
@@ -215,7 +246,7 @@ export const showCinema = function (main) {
                 </button>
               </div>
             </div>
-            <div class="card__details">
+            <div class="card__details  card__detailsPS${nowPlayingS}">
               <h4 class="card__title">${name}</h4>
                 <div class="card__details-bottom">
                       <p class="card__date"><i>Release: </i>${
@@ -231,11 +262,22 @@ export const showCinema = function (main) {
                         ${vote_average.toFixed(1)}
                       </p>
                 </div>
-                <button class="btn btn-bookticket">Book Ticket</button>
+                ${
+                  createButtonWithOnClick(
+                    id,
+                    '.card__detailsPS' + nowPlayingS
+                  ) === undefined
+                    ? ''
+                    : createButtonWithOnClick(
+                        id,
+                        '.card__detailsPS' + nowPlayingS
+                      )
+                }   
             </div>
           </div> 
           `;
       nowPlayingSectionSeries.insertAdjacentHTML('afterbegin', card);
+      nowPlayingS++;
     }
   };
   fetchDataFromServer(
@@ -245,6 +287,7 @@ export const showCinema = function (main) {
 
   // Get data of All the Trendings movies of present Week
   const nowPlayingSectionMovies = document.getElementById('Now-PlayingMovies');
+  let nowPlayingM = 0;
   const nowPlayingSectionMoviesCall = function ({ results: movieList }) {
     for (const [index, movie] of movieList.entries()) {
       const {
@@ -282,7 +325,7 @@ export const showCinema = function (main) {
                 </button>
               </div>
             </div>
-            <div class="card__details">
+            <div class="card__details card__detailsPM${nowPlayingM}">
               <h4 class="card__title">${title}</h4>
                 <div class="card__details-bottom">
                       <p class="card__date"><i>Release: </i>${
@@ -298,13 +341,24 @@ export const showCinema = function (main) {
                         ${vote_average.toFixed(1)}
                       </p>
                 </div>
-                <button class="btn btn-bookticket">Book Ticket</button>
+                ${
+                  createButtonWithOnClick(
+                    id,
+                    '.card__detailsPM' + nowPlayingM
+                  ) === undefined
+                    ? ''
+                    : createButtonWithOnClick(
+                        id,
+                        '.card__detailsPM' + nowPlayingM
+                      )
+                }   
             </div>
           </div> 
           `;
       const randomIndex = Math.floor(Math.random() * 8 + 1);
       if (index === randomIndex) changeHeaderBanner(movie);
       nowPlayingSectionMovies.insertAdjacentHTML('beforeend', card);
+      nowPlayingM++;
     }
   };
   fetchDataFromServer(
@@ -312,3 +366,56 @@ export const showCinema = function (main) {
     nowPlayingSectionMoviesCall
   );
 };
+
+function createButtonWithOnClick(movieId, parentEl) {
+  setTimeout(() => {
+    const button = document.createElement('button');
+    button.classList.add('btn');
+    button.classList.add('btn-bookticket');
+    button.textContent = 'Book Ticket';
+    button.onclick = function () {
+      openCinemaBookingPage(movieId);
+    };
+    const parent = document.querySelector(parentEl);
+    parent.appendChild(button);
+  }, 500);
+}
+
+// Handling Login and Signout Functionality and the book seat will only work if the user is logged in
+const loginBtn = document.querySelector('.main-loginBtn');
+const loginNavArea = document.querySelector('.login-nav-item');
+const userNavArea = document.querySelector('.user-nav-item');
+const loginModel = document.querySelector('.model-login');
+const logoutBtn = document.querySelector('.main-logoutBtn');
+const usernameL = document.querySelector('.login-username');
+const passwordL = document.querySelector('.login-password');
+let loggedIn = false;
+
+loginBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  if (
+    usernameL.value.trim() === 'noumanDemo' &&
+    passwordL.value.trim() === 'demo'
+  ) {
+    loginNavArea.classList.add('hidden');
+    userNavArea.classList.remove('hidden');
+    loginModel.classList.remove('model--active');
+    showSuccess('You are now logged in ...');
+    loggedIn = true;
+  } else {
+    showError('Details: UserName => noumanDemo & Password => demo');
+  }
+});
+
+logoutBtn.addEventListener('click', function () {
+  loginNavArea.classList.remove('hidden');
+  userNavArea.classList.add('hidden');
+  showSuccess('You are logged Out... But, to Book seats you have to login.');
+  loggedIn = false;
+});
+
+function openCinemaBookingPage(movieId) {
+  if (loggedIn === true) {
+    checkoutTickets(movieId);
+  } else showError('You have to login first ...');
+}

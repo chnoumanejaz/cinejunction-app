@@ -1,5 +1,11 @@
-/*
+/*--------------------
     Reusable Components
+  --------------------
+*/
+
+/*--------------------
+  Buttons
+  --------------------
 */
 
 .btn {
@@ -19,5 +25,9 @@
   }
   &-loadmore{
     margin-bottom: 1.5rem;
+  }
+  &-checkout{
+    text-align: center;
+    letter-spacing: .1rem;
   }
 }

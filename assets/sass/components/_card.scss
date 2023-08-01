@@ -1,9 +1,15 @@
+/*--------------------
+  Cards
+  --------------------
+*/
+
+
 .card {
   padding: 1rem;
   transition: all 0.2s;
   position: relative;
   width: 20rem;
-  // cursor: pointer;
+
   &__img {
     width: 15rem;
     height: 20rem;
@@ -35,6 +41,9 @@
     border-radius: 6px;
     transform: scale(1.05);
     width: 18rem;
+    @include respond(phone) {
+      width: 15rem;
+    }
   }
   .addbtn,
   .detailbtn,
@@ -51,7 +60,6 @@
       transform: translateY(0.2rem);
     }
     &:hover {
-      //   border-radius: 1rem;
       border: 1px solid $grey-color-light-2;
     }
     &--added {
@@ -101,17 +109,4 @@
   &__date i {
     color: $grey-color-light;
   }
-
-  // &:hover &__imgtrending {
-  //   content: url(../../../assets/img/trending\ banner.jpg);
-  // }
-  // &:hover &__imgseason {
-  //   content: url(../../../assets/img/season\ banner.jpg);
-  // }
-  // &:hover &__imgmovie {
-  //   content: url(../../../assets/img/movie\ banner.jpg);
-  // }
-  // &:hover &__imgcomedy {
-  //   content: url(../../../assets/img/comedy\ banner.jpg);
-  // }
 }

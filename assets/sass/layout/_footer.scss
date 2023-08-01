@@ -1,3 +1,7 @@
+/*--------------------
+  Footer Styling
+  --------------------
+*/
 .footer {
   background-color: $primary-color-dark;
   font-size: 1.5rem;
@@ -10,10 +14,17 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 1rem;
+  @include respond(phone) {
+    flex-wrap: wrap;
+  }
   &-right {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    @include respond(phone) {
+      width: 100%;
+      margin-top: 2rem;
+    }
     & input {
       width: 100%;
       display: block;
@@ -55,8 +66,12 @@
     background-color: $secondary-color;
     @include absolute-center;
     transform: translateY(8rem);
-    // transition: all .5s ease;
     animation: updown 0.5s infinite alternate;
+    @include respond(phone) {
+      left: 1rem;
+      height: 3rem;
+      width: 3rem;
+    }
   }
   &--copyright {
     position: absolute;
@@ -68,6 +83,10 @@
     word-spacing: 0.1rem;
     display: flex;
     gap: 0.5rem;
+    @include respond(phone) {
+      width: 100%;
+      left: 0;
+    }
     & span {
       padding: 0.1rem 0.3rem;
       border: 1px solid transparent;

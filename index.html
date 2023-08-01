@@ -17,7 +17,7 @@
     <header class="header">
       <!-- Navigation -->
       <nav class="navigation">
-        <div class="navigation__center">
+        <div class="navigation__left">
           <ul class="navigation__list">
             <li class="navigation__item">
               <a href="#" class="navigation__link navigation__link--active">
@@ -43,15 +43,15 @@
               </a>
               <ul class="navigation__list-sublist navigation__drop-menu">
                 <li class="navigation__item">
-                  <a href="#" class="navigation__link no-wrap">
-                    Web Settings
+                  <a href="#" class="navigation__link no-wrap remove-chatbot">
+                    Remove Chatbot
                   </a>
                 </li>
-                <li class="navigation__item">
-                  <a href="#" class="navigation__link">About Us</a>
+                <li class="navigation__item about-me">
+                  <a href="#" class="navigation__link">About Me</a>
                 </li>
-                <li class="navigation__item">
-                  <a href="#" class="navigation__link">Contact Us</a>
+                <li class="navigation__item about-me">
+                  <a href="#" class="navigation__link">Contact Me</a>
                 </li>
               </ul>
             </li>
@@ -107,7 +107,7 @@
               <a href="#" class="navigation__link">Cinema</a>
             </li>
 
-            <li class="navigation__item">
+            <li class="navigation__item login-nav-item">
               <a href="#" class="navigation__link svg-drop">
                 Login
                 <svg class="svg">
@@ -116,7 +116,7 @@
               </a>
             </li>
 
-            <li class="navigation__item navigation__drop hidden">
+            <li class="navigation__item navigation__drop user-nav-item hidden">
               <a href="#" class="navigation__link svg-drop">
                 <svg class="svg svg-user">
                   <use xlink:href="./assets/img/sprite.svg#icon-user"></use>
@@ -127,10 +127,10 @@
                 </svg>
               </a>
               <ul class="navigation__list-sublist navigation__drop-menu">
-                <li class="navigation__item">
-                  <a href="#" class="navigation__link">Settings</a>
+                <li class="navigation__item about-me">
+                  <a href="#" class="navigation__link no-wrap">About User</a>
                 </li>
-                <li class="navigation__item">
+                <li class="navigation__item main-logoutBtn">
                   <a href="#" class="navigation__link">logout</a>
                 </li>
               </ul>
@@ -149,6 +149,41 @@
     <div class="loader-parent">
       <div class="loader"></div>
       <div class="loader-text">Loading ...</div>
+    </div>
+
+    <!-- login Model -->
+    <div class="model model-login">
+      <div class="model__heading">
+        <p>Login to your Account</p>
+      </div>
+      <div class="model__content">
+        <form>
+          <label for="username">Enter Your UserName:</label>
+          <input
+            type="text"
+            value="noumanDemo"
+            class="login-username"
+            id="Lusername"
+            required />
+          <label for="password">Enter Your Password:</label>
+          <input
+            type="password"
+            value="demo"
+            class="login-password"
+            id="Lpassword"
+            required />
+          <div class="message-bottom">
+            Don't have an account? Create one
+            <span class="signup-link">Signup</span>
+          </div>
+          <button class="login-btn btn main-loginBtn">
+            Login
+            <svg class="svg">
+              <use xlink:href="./assets/img/sprite.svg#icon-log-in"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
     </div>
 
     <!-- Error and Info Messages -->
